@@ -92,4 +92,9 @@ a.brand {
     display: block;
   }
 }
+
+/* Hide site state posts count that links to archives */
+.site-state-item-posts {
+  display: none !important;
+}
 </style>

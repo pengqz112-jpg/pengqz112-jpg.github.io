@@ -4,22 +4,22 @@ date: 2025-01-01 00:00:00
 ---
 
 <style>
+.about-header {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
 .about-header-image {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 200px;
-  height: 200px;
+  float: right;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 10;
+  margin: 0 0 20px 30px;
 }
 @media (max-width: 768px) {
   .about-header-image {
-    position: relative;
-    top: 0;
-    right: 0;
+    float: none;
     width: 150px;
     height: 150px;
     margin: 0 auto 20px;
@@ -86,7 +86,10 @@ date: 2025-01-01 00:00:00
 }
 </style>
 
-<img src="/images/photo_about.jpg" alt="Zion Peng" class="about-header-image">
+<div class="about-header">
+  <h2>About Me</h2>
+  <img src="/images/photo_about.jpg" alt="Zion Peng" class="about-header-image">
+</div>
 
 ## Education Background
 

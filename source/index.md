@@ -82,7 +82,7 @@ layout: page
 
   <div class="home-links">
     <a href="/about/">Learn More About Me</a>
-    <a href="/projects/">View My Projects</a>
+    <a href="/internship/">View My Internships</a>
     <a href="/blog/">Read My Blog</a>
     <a href="/archives/">Browse Archives</a>
   </div>

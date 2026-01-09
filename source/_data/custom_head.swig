@@ -4,6 +4,22 @@
   display: none !important;
 }
 
+/* Remove black background from site title */
+.site-title {
+  background: #f5f5f5 !important;
+  color: #333 !important;
+  border: 1px solid #e0e0e0 !important;
+  padding: 8px 16px !important;
+  margin: 0 !important;
+}
+.brand {
+  background: transparent !important;
+  border: none !important;
+}
+.site-meta {
+  background: transparent !important;
+}
+
 /* Reduce top spacing for site header */
 .site-header {
   margin-top: 0 !important;
@@ -19,13 +35,6 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
   margin-bottom: 10px !important;
-}
-.site-title {
-  background: #f5f5f5 !important;
-  color: #333 !important;
-  border: 1px solid #e0e0e0 !important;
-  padding: 8px 16px !important;
-  margin: 0 !important;
 }
 
 /* Reduce top spacing for all pages */

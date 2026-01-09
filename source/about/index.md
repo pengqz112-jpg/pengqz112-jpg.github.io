@@ -54,7 +54,7 @@ date: 2025-01-01 00:00:00
 }
 .education-university a:hover {
   color: #333;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .education-supervisor {
   color: #888;

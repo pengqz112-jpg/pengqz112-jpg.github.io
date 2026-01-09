@@ -3,6 +3,33 @@ title: About Me
 date: 2025-01-01 00:00:00
 ---
 
+<style>
+.about-header-image {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .about-header-image {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+}
+</style>
+
+<img src="/images/photo_about.jpg" alt="Zion Peng" class="about-header-image">
+
 ## About Me
 
 Hi, I’m Zion Peng. I am a scholar passionate about implementing effective, high-reliability machine learning methods to address real-world problems. 

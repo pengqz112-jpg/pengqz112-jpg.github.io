@@ -1,0 +1,16 @@
+<script>
+// Add photo to homepage
+if (document.querySelector('.posts-expand') || document.querySelector('.post-block')) {
+  const homeImage = document.createElement('img');
+  homeImage.src = '/images/photo_home.jpg';
+  homeImage.alt = 'Zion Peng';
+  homeImage.className = 'home-header-image';
+  
+  // Insert at the beginning of main content
+  const mainContent = document.querySelector('.main-inner') || document.querySelector('.content');
+  if (mainContent) {
+    mainContent.style.position = 'relative';
+    mainContent.appendChild(homeImage);
+  }
+}
+</script>

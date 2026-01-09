@@ -69,6 +69,22 @@ date: 2025-01-01 00:00:00
   padding-top: 30px;
   border-top: 2px solid #ddd;
 }
+.paper-link {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+.paper-link:hover {
+  background: #e0e0e0;
+  border-color: #bbb;
+}
 </style>
 
 <img src="/images/photo_about.jpg" alt="Zion Peng" class="about-header-image">
@@ -98,6 +114,5 @@ date: 2025-01-01 00:00:00
 ## Publications
 
 <div class="papers-section">
-  <p>Peng, Q., & Li, D. (2025). AdaptiveWatermark: Dynamic Watermarking for Large Language Models with Agent. In <em>Proceedings of the IEEE International Conference on Trust, Security and Privacy in Computing and Communications (IEEE TrustCom 2025)</em>. Guangzhou, China: IEEE. (Accepted)</p>
-  <p><a href="/files/QingzePeng_AcceptedPaper_Watermarking.pdf" target="_blank">📄 Download PDF</a></p>
+  <p>Peng, Q., & Li, D. (2025). AdaptiveWatermark: Dynamic Watermarking for Large Language Models with Agent. In <em>Proceedings of the IEEE International Conference on Trust, Security and Privacy in Computing and Communications (IEEE TrustCom 2025)</em>. Guangzhou, China: IEEE. (Accepted) <a href="/files/QingzePeng_AcceptedPaper_Watermarking.pdf" target="_blank" class="paper-link">[PDF]</a></p>
 </div>

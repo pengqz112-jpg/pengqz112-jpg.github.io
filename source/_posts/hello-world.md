@@ -7,18 +7,22 @@ categories:
 
 Welcome! This is the first post on my personal homepage.
 
-Here you will find notes on what I am building, what I am learning, and ideas worth keeping.
+I'm **Zion Peng**, a researcher passionate about implementing effective, high-reliability machine learning methods to address real-world problems.
 
 ## What This Site Is For
 
-- A **blog** where I can write down thoughts and lessons learned.
-- A **home base** that links to my projects and profiles.
-- A **sandbox** to try out new tools, themes, and layouts.
+This homepage serves as a central place where I share:
+
+- **Research updates**: My latest academic work, publications, and research progress
+- **Internship experiences**: Projects and learnings from my internships at FWD Group, Guangdong Zhongshi Information Technology, and Guangzhou Jiadu Zhitong Technology
+- **Academic journey**: Notes on machine learning, data science, and industrial AI applications
+- **Personal growth**: Reflections on research, learning, and professional development
 
 ## What You Can Expect
 
-- Short posts focused on practice and real experience.
-- Occasional deep dives into topics I find interesting.
-- Updates to the projects listed on the Projects page.
+- Updates on my research publications and academic work
+- Insights from my internship experiences in data science and AI
+- Technical notes on machine learning methodologies and applications
+- Occasional thoughts on research, technology, and career development
 
-Thanks for stopping by &mdash; feel free to look around the About and Projects pages to get a better sense of who I am and what I do.
+Thanks for stopping by &mdash; feel free to explore the [About](/about/) page to learn more about my education and research background, or check out my [Internship](/internship/) experiences.

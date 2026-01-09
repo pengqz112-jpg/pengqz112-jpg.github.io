@@ -4,7 +4,7 @@
   display: none !important;
 }
 
-/* Remove black background from site title */
+/* Remove all black backgrounds and borders from site title area */
 .site-title {
   background: #f5f5f5 !important;
   color: #333 !important;
@@ -15,8 +15,20 @@
 .brand {
   background: transparent !important;
   border: none !important;
+  box-shadow: none !important;
+}
+.brand:before,
+.brand:after {
+  display: none !important;
+  background: transparent !important;
 }
 .site-meta {
+  background: transparent !important;
+}
+.site-meta a {
+  background: transparent !important;
+}
+a.brand {
   background: transparent !important;
 }
 
@@ -25,6 +37,7 @@
   margin-top: 0 !important;
   padding-top: 5px !important;
   margin-bottom: 10px !important;
+  background: transparent !important;
 }
 .brand {
   margin-top: 0 !important;

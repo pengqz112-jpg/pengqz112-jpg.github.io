@@ -34,6 +34,8 @@ categories:
 
 **Concept Bottleneck Models (CBMs)** are a novel neural network architecture proposed to address the "black box" problem in deep learning. The core idea is to introduce an intermediate layer of human-interpretable concepts between the input and the final prediction, making the model's decision process transparent and explainable.
 
+<!-- more -->
+
 ## The Black Box Problem in DNNs
 
 Traditional Deep Neural Networks (DNNs) are end-to-end models - you feed in an input (e.g., an image) and get an output (e.g., a classification label). But what happens in between? The intermediate layers consist of millions of parameters that form a "black box" that is nearly impossible to interpret.

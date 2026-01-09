@@ -9,6 +9,8 @@ Welcome! This is the first post on my personal homepage.
 
 I'm **Zion Peng**, a researcher passionate about implementing effective, high-reliability machine learning methods to address real-world problems.
 
+<!-- more -->
+
 ## What This Site Is For
 
 This homepage serves as a central place where I share:

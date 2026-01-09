@@ -67,7 +67,7 @@ date: 2025-01-01 00:00:00
 }
 .education-supervisor a:hover {
   color: #555;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .papers-section {
   margin-top: 0;

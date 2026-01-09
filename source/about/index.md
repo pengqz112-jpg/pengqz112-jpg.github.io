@@ -5,7 +5,7 @@ date: 2025-01-01 00:00:00
 
 <style>
 /* Hide the page title at the top */
-.post-header {
+.post-title {
   display: none;
 }
 .about-header {

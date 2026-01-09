@@ -8,6 +8,15 @@ date: 2025-01-01 00:00:00
 .post-title {
   display: none;
 }
+/* Reduce top spacing */
+.post-block {
+  margin-top: 0;
+  padding-top: 0;
+}
+.post-body {
+  margin-top: 0;
+  padding-top: 0;
+}
 .about-header {
   display: flex;
   align-items: flex-start;

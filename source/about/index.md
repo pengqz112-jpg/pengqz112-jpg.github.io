@@ -43,9 +43,26 @@ date: 2025-01-01 00:00:00
   color: #666;
   margin-bottom: 5px;
 }
+.education-university a {
+  color: #666;
+  text-decoration: none;
+}
+.education-university a:hover {
+  color: #333;
+  text-decoration: underline;
+}
 .education-supervisor {
   color: #888;
   font-size: 0.95em;
+  margin-top: 5px;
+}
+.education-supervisor a {
+  color: #888;
+  text-decoration: none;
+}
+.education-supervisor a:hover {
+  color: #555;
+  text-decoration: underline;
 }
 .papers-section {
   margin-top: 40px;
@@ -61,17 +78,21 @@ date: 2025-01-01 00:00:00
 <div class="education-item">
   <div class="education-degree">B.Mgt. Information Management and Information System</div>
   <div class="education-university">
-    <a href="https://ischool.sysu.edu.cn/zh-hans/node/286" target="_blank">Sun Yat-sen University</a>
+    <a href="http://www.sysu.edu.cn/" target="_blank">Sun Yat-sen University (SYSU)</a>
   </div>
-  <div class="education-supervisor">Supervised by <a href="https://ischool.sysu.edu.cn/zh-hans/node/286" target="_blank">Daifeng Li</a></div>
+  <div class="education-supervisor">
+    Supervised by <a href="https://ischool.sysu.edu.cn/zh-hans/teacher/244" target="_blank">Guochao Peng</a>, Co-supervised by <a href="https://ischool.sysu.edu.cn/zh-hans/node/286" target="_blank">Daifeng Li</a>
+  </div>
 </div>
 
 <div class="education-item">
   <div class="education-degree">M.Phil. in Industrial Artificial Intelligence</div>
   <div class="education-university">
-    <a href="https://www.polyu.edu.hk/ise/people/academic-staff/xiaoge-zhang/" target="_blank">The Hong Kong Polytechnic University</a>
+    <a href="https://www.polyu.edu.hk/" target="_blank">The Hong Kong Polytechnic University (PolyU)</a>
   </div>
-  <div class="education-supervisor">Supervised by <a href="https://www.polyu.edu.hk/ise/people/academic-staff/xiaoge-zhang/" target="_blank">Xiaoge Zhang</a></div>
+  <div class="education-supervisor">
+    Supervised by <a href="https://www.polyu.edu.hk/ise/people/academic-staff/xiaoge-zhang/" target="_blank">Xiaoge Zhang</a>, Co-supervised by <a href="https://www.polyu.edu.hk/ise/people/academic-staff/nick-sh-chung/" target="_blank">Chung Nick</a>
+  </div>
 </div>
 
 ## Publications

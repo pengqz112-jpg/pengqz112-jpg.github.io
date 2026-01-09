@@ -1,4 +1,41 @@
 <style>
+/* Reduce top spacing for site title */
+.site-header {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+}
+.brand {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.site-title {
+  background: #f5f5f5 !important;
+  color: #333 !important;
+  border: 1px solid #e0e0e0 !important;
+  padding: 8px 16px !important;
+}
+
+/* Reduce top spacing for all pages */
+.main-inner {
+  padding-top: 20px !important;
+}
+.post-block {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.post-body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.post {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* Home page header image - floats to right, doesn't block content */
 .home-header-image {
   float: right;

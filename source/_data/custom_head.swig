@@ -13,6 +13,33 @@
 }
 
 /* ============================================
+   FIX TOP BLACK BAR - Remove all dark headers
+   ============================================ */
+.headband {
+  display: none !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+.header-inner {
+  background: transparent !important;
+}
+
+.site-brand-container {
+  background: transparent !important;
+}
+
+header.header {
+  background: transparent !important;
+  border: none !important;
+}
+
+.header {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* ============================================
    SITE TITLE - Clean Modern Style
    ============================================ */
 .logo-line {
@@ -48,6 +75,7 @@
 }
 .site-meta {
   background: transparent !important;
+  border: none !important;
 }
 .site-meta a {
   background: transparent !important;

@@ -13,7 +13,7 @@
 }
 
 /* ============================================
-   GLOBAL TEXT - Better Word Breaking
+   GLOBAL TEXT
    ============================================ */
 * {
   word-wrap: break-word;
@@ -30,7 +30,7 @@ p {
 }
 
 /* ============================================
-   FIX TOP BLACK BAR - Remove all dark headers
+   FIX TOP BLACK BAR
    ============================================ */
 .headband {
   display: none !important;
@@ -55,19 +55,13 @@ header.header,
   display: none !important;
 }
 
-.brand {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
 .site-meta {
   background: transparent !important;
   border: none !important;
 }
 
 /* ============================================
-   NAVIGATION MENU - More Prominent
+   NAVIGATION MENU
    ============================================ */
 .menu {
   display: flex !important;
@@ -103,26 +97,107 @@ header.header,
 }
 
 /* ============================================
-   SIDEBAR STYLING - Always Visible
+   SIDEBAR - Hidden by default, overlay on open
    ============================================ */
+/* Hide default sidebar - don't take up space */
 .sidebar {
+  position: fixed !important;
+  left: -320px !important;
+  top: 0 !important;
+  width: 280px !important;
+  height: 100vh !important;
   background: #fff !important;
-  visibility: visible !important;
-  transform: none !important;
+  z-index: 10000 !important;
+  transition: left 0.3s ease !important;
+  box-shadow: none !important;
+  overflow-y: auto !important;
+}
+
+/* Show sidebar when open */
+body.sidebar-open .sidebar {
+  left: 0 !important;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Overlay background when sidebar is open */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+body.sidebar-open .sidebar-overlay {
+  display: block;
 }
 
 .sidebar-inner {
   background: #fff !important;
-  padding: 20px !important;
+  padding: 25px 20px !important;
 }
 
-/* Hide sidebar toggle button */
+/* Hide NexT default toggle */
 .sidebar-toggle {
   display: none !important;
 }
 
+/* Custom toggle button - small circle */
+#profile-btn {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+#profile-btn:hover {
+  transform: scale(1.1);
+}
+
+#profile-btn i {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Close button inside sidebar */
+#sidebar-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: var(--bg-light);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10001;
+}
+
+#sidebar-close:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
 /* ============================================
-   TABLE OF CONTENTS - COMPLETELY HIDDEN
+   TABLE OF CONTENTS - HIDDEN
    ============================================ */
 .post-toc-wrap,
 .post-toc,
@@ -132,57 +207,80 @@ header.header,
 .sidebar-nav,
 #table-of-contents {
   display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
 
 /* ============================================
-   SIDEBAR PROFILE - Enhanced
+   SIDEBAR PROFILE - Better Layout
    ============================================ */
 .site-author-image {
-  width: 100px !important;
-  height: 100px !important;
+  display: block !important;
+  width: 90px !important;
+  height: 90px !important;
   border: 3px solid var(--primary-color) !important;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25) !important;
-  margin-bottom: 15px !important;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2) !important;
+  margin: 0 auto 15px auto !important;
 }
 
 .site-author-name {
   display: block !important;
   color: var(--text-primary) !important;
   font-weight: 600 !important;
-  font-size: 1.2em !important;
-  margin-bottom: 8px !important;
+  font-size: 1.15em !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
 }
 
 .site-description {
   display: none !important;
 }
 
-/* Site State - Hide */
 .site-state {
   display: none !important;
 }
 
-/* Research Interest Box */
+/* Research Interests */
 .site-overview {
   display: block !important;
+  text-align: center !important;
 }
 
+.research-box {
+  margin-top: 15px;
+  padding: 12px 14px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+  text-align: left;
+}
+
+.research-box strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.9em;
+  margin-bottom: 6px;
+}
+
+.research-box span {
+  color: var(--text-secondary);
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* Social Links */
 .links-of-author {
-  margin-top: 15px !important;
+  margin-top: 18px !important;
   padding-top: 15px !important;
   border-top: 1px solid var(--border-light) !important;
+  text-align: center !important;
 }
 
 .links-of-author a {
   color: var(--primary-color) !important;
-  margin: 0 10px !important;
-  transition: all 0.3s ease !important;
+  margin: 0 12px !important;
+  transition: color 0.2s ease !important;
   text-decoration: none !important;
   border: none !important;
-  font-size: 1.3em !important;
+  font-size: 1.2em !important;
 }
 
 .links-of-author a:hover {
@@ -433,17 +531,3 @@ a[rel="more"] {
   background: var(--accent-color);
 }
 </style>
-
-<!-- Research Interests Box -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var siteOverview = document.querySelector('.site-overview');
-  if (siteOverview && !document.querySelector('.research-interests')) {
-    var researchBox = document.createElement('div');
-    researchBox.className = 'research-interests';
-    researchBox.innerHTML = '<strong>Research Interests</strong><br>Machine Learning · Data Mining · AI Security';
-    researchBox.style.cssText = 'margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 6px; border-left: 3px solid #667eea; font-size: 0.9em; color: #666; line-height: 1.6;';
-    siteOverview.appendChild(researchBox);
-  }
-});
-</script>

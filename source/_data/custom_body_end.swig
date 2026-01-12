@@ -1,40 +1,68 @@
 <script>
-// Fix Table of Contents click functionality (if any TOC exists)
 (function() {
-  function fixTOC() {
-    const tocLinks = document.querySelectorAll('.toc-link, .post-toc a');
+  function initSidebar() {
+    var body = document.body;
+    var sidebar = document.querySelector('.sidebar');
+    var sidebarInner = document.querySelector('.sidebar-inner');
     
-    tocLinks.forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          const targetId = href.substring(1);
-          const targetElement = document.getElementById(targetId) || 
-                               document.querySelector('[name="' + targetId + '"]');
-          
-          if (targetElement) {
-            e.preventDefault();
-            const offset = 80;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-            
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
-            
-            if (history.pushState) {
-              history.pushState(null, null, href);
-            }
-          }
-        }
+    // Create overlay
+    var overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+    
+    // Create profile button (small circle)
+    var profileBtn = document.createElement('button');
+    profileBtn.id = 'profile-btn';
+    profileBtn.innerHTML = '<i class="fa fa-user"></i>';
+    profileBtn.setAttribute('aria-label', 'Open profile');
+    document.body.appendChild(profileBtn);
+    
+    // Create close button inside sidebar
+    if (sidebarInner) {
+      var closeBtn = document.createElement('button');
+      closeBtn.id = 'sidebar-close';
+      closeBtn.innerHTML = '✕';
+      closeBtn.setAttribute('aria-label', 'Close sidebar');
+      sidebarInner.style.position = 'relative';
+      sidebarInner.insertBefore(closeBtn, sidebarInner.firstChild);
+      
+      closeBtn.addEventListener('click', function() {
+        body.classList.remove('sidebar-open');
       });
+    }
+    
+    // Add Research Interests box
+    var siteOverview = document.querySelector('.site-overview');
+    if (siteOverview && !document.querySelector('.research-box')) {
+      var researchBox = document.createElement('div');
+      researchBox.className = 'research-box';
+      researchBox.innerHTML = '<strong>Research Interests</strong><span>Machine Learning · Data Mining · AI Security</span>';
+      siteOverview.appendChild(researchBox);
+    }
+    
+    // Toggle sidebar
+    profileBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      body.classList.toggle('sidebar-open');
+    });
+    
+    // Close on overlay click
+    overlay.addEventListener('click', function() {
+      body.classList.remove('sidebar-open');
+    });
+    
+    // Close on ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        body.classList.remove('sidebar-open');
+      }
     });
   }
   
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fixTOC);
+    document.addEventListener('DOMContentLoaded', initSidebar);
   } else {
-    fixTOC();
+    initSidebar();
   }
 })();
 </script>

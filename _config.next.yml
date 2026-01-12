@@ -9,7 +9,7 @@ menu:
 
 sidebar:
   position: left
-  display: always
+  display: post
 
 toc:
   enable: false

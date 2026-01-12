@@ -126,7 +126,7 @@ toc: false
     <img src="/images/fwd-logo.png" alt="FWD Group" class="company-logo">
     <div class="company-info">
       <div class="company-name">FWD Group <span class="current-badge">Current</span></div>
-      <div class="company-period">2024 - Present</div>
+      <div class="company-period">2025.11 - Present</div>
     </div>
   </div>
   <div class="company-background">A pan-Asian life insurance company committed to changing the way people feel about insurance.</div>

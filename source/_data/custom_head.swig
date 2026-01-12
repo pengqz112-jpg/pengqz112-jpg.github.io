@@ -179,9 +179,15 @@ header.header {
 }
 
 /* Research Interest - Custom Section */
+.site-overview {
+  display: block !important;
+  visibility: visible !important;
+}
+
 .site-overview::after {
   content: "Research Interests: Machine Learning · Data Mining · AI Security";
   display: block !important;
+  visibility: visible !important;
   color: var(--text-secondary) !important;
   font-size: 0.85em !important;
   line-height: 1.5 !important;
@@ -223,7 +229,21 @@ header.header {
    ============================================ */
 .post-toc-wrap,
 .post-toc,
-.sidebar-panel-container {
+.sidebar-panel-container,
+.sidebar-nav,
+.sidebar-nav-toc,
+.sidebar-toggle,
+#sidebar-toc-toggle,
+.toc,
+.toc-wrap,
+.sidebar-panel {
+  display: none !important;
+}
+
+/* Hide "Table of Contents" title text */
+.sidebar-inner .sidebar-nav,
+.post-toc-title,
+.toc-title {
   display: none !important;
 }
 

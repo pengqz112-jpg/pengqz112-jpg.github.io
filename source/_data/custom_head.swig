@@ -108,37 +108,43 @@ header.header {
 }
 
 /* ============================================
-   NAVIGATION ICONS - Purple Theme
+   NAVIGATION MENU - More Prominent
    ============================================ */
+.menu {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 12px 0 !important;
+  margin: 10px 0 20px 0 !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.menu-item {
+  margin: 0 !important;
+}
+
 .menu-item a {
   color: var(--text-primary) !important;
-  transition: color 0.3s ease !important;
+  font-size: 1em !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
 }
 
 .menu-item a:hover {
-  color: var(--primary-color) !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%) !important;
 }
 
-.menu-item a i,
-.menu-item a .fa,
-.menu-item a .fab {
-  color: var(--primary-color) !important;
-  transition: transform 0.3s ease !important;
-}
-
-.menu-item a:hover i,
-.menu-item a:hover .fa,
-.menu-item a:hover .fab {
-  transform: scale(1.1) !important;
-}
-
-.menu-item-active a,
-.menu-item-active a i {
-  color: var(--accent-color) !important;
+.menu-item-active a {
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%) !important;
 }
 
 /* ============================================
-   SIDEBAR STYLING - Clean & Minimal
+   SIDEBAR STYLING - Enhanced Profile
    ============================================ */
 .sidebar {
   background: #fff !important;
@@ -146,143 +152,79 @@ header.header {
 
 .sidebar-inner {
   background: #fff !important;
-  padding: 15px !important;
+  padding: 20px !important;
 }
 
-/* Author Section - Simplified */
+/* Author Section - Larger & More Prominent */
 .site-author-image {
-  width: 70px !important;
-  height: 70px !important;
-  border: 2px solid var(--primary-color) !important;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2) !important;
+  width: 100px !important;
+  height: 100px !important;
+  border: 3px solid var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25) !important;
+  margin-bottom: 15px !important;
 }
 
-/* Hide author name in sidebar - cleaner look */
+/* Show author name */
 .site-author-name {
-  display: none !important;
+  display: block !important;
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 1.2em !important;
+  margin-bottom: 8px !important;
 }
 
-/* Hide site description in sidebar */
+/* Hide default site description */
 .site-description {
   display: none !important;
 }
 
-/* Site State */
-.site-state-item-count {
-  color: var(--primary-color) !important;
-  font-weight: 600 !important;
+/* Research Interest - Custom Section */
+.site-overview::after {
+  content: "Research Interests: Machine Learning · Data Mining · AI Security";
+  display: block !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.85em !important;
+  line-height: 1.5 !important;
+  margin-top: 12px !important;
+  padding: 10px 12px !important;
+  background: var(--bg-light) !important;
+  border-radius: 6px !important;
+  border-left: 3px solid var(--primary-color) !important;
 }
 
-/* Social Links - Compact style */
+/* Site State - Hide */
+.site-state {
+  display: none !important;
+}
+
+/* Social Links - Prominent style */
 .links-of-author {
-  margin-top: 10px !important;
+  margin-top: 15px !important;
+  padding-top: 15px !important;
+  border-top: 1px solid var(--border-light) !important;
 }
 
 .links-of-author a {
   color: var(--primary-color) !important;
-  margin: 0 8px !important;
-  transition: color 0.3s ease !important;
+  margin: 0 10px !important;
+  transition: all 0.3s ease !important;
   text-decoration: none !important;
   border: none !important;
-  font-size: 1.1em !important;
+  font-size: 1.3em !important;
 }
 
 .links-of-author a:hover {
   color: var(--accent-color) !important;
+  transform: scale(1.1) !important;
 }
 
 /* ============================================
-   TABLE OF CONTENTS - Clean Hierarchy (No Numbers)
+   TABLE OF CONTENTS - HIDDEN
    ============================================ */
-.post-toc {
-  font-size: 0.88em !important;
-}
-
-.post-toc ol {
-  padding-left: 0 !important;
-  list-style: none !important;
-  margin: 0 !important;
-  counter-reset: none !important;
-}
-
-/* Hide ALL TOC numbers - clean display */
-.post-toc .nav-number {
+.post-toc-wrap,
+.post-toc,
+.sidebar-panel-container {
   display: none !important;
-}
-
-/* Level 1 items (h2) */
-.post-toc .nav-item {
-  line-height: 1.6 !important;
-  margin-bottom: 4px !important;
-}
-
-/* Level 2 items (h3) - nested with visual indicator */
-.post-toc .nav-item .nav-item {
-  padding-left: 16px !important;
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
-  font-size: 0.92em !important;
-  position: relative;
-}
-
-/* Visual hierarchy indicator for nested items */
-.post-toc .nav-item .nav-item::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  background: var(--border-light);
-  border-radius: 50%;
-}
-
-/* Level 3 items (h4) - further nested */
-.post-toc .nav-item .nav-item .nav-item {
-  padding-left: 28px !important;
-  font-size: 0.88em !important;
-}
-
-.post-toc .nav-item .nav-item .nav-item::before {
-  left: 16px;
-  width: 3px;
-  height: 3px;
-}
-
-.post-toc .nav-link {
-  color: var(--text-secondary) !important;
-  padding: 6px 10px 6px 8px !important;
-  display: block !important;
-  transition: all 0.2s ease !important;
-  text-decoration: none !important;
-  border: none !important;
-  border-left: 2px solid transparent !important;
-  border-radius: 0 4px 4px 0 !important;
-}
-
-.post-toc .nav-link:hover {
-  color: var(--primary-color) !important;
-  border-left-color: var(--primary-color) !important;
-  background: rgba(102, 126, 234, 0.06) !important;
-}
-
-.post-toc .active > .nav-link,
-.post-toc .nav-link.active {
-  color: var(--primary-color) !important;
-  border-left-color: var(--accent-color) !important;
-  background: rgba(102, 126, 234, 0.1) !important;
-  font-weight: 500 !important;
-}
-
-/* TOC Title */
-.post-toc-title {
-  font-weight: 600 !important;
-  color: var(--text-primary) !important;
-  font-size: 0.95em !important;
-  margin-bottom: 12px !important;
-  padding-bottom: 8px !important;
-  border-bottom: 1px solid var(--border-light) !important;
 }
 
 /* ============================================

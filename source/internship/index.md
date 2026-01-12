@@ -1,30 +1,13 @@
 ---
-title: Professional Experience
+title: Internship
 date: 2025-01-01 00:00:00
 toc: false
 ---
 
 <style>
-.internship-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 25px 30px;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-}
-.internship-header h2 {
-  margin: 0 !important;
-  color: #fff !important;
-  border: none !important;
-}
-.internship-header p {
-  margin: 10px 0 0 0;
-  opacity: 0.95;
-}
 .internship-item {
-  margin-bottom: 30px;
-  padding: 25px;
+  margin-bottom: 25px;
+  padding: 22px;
   background: #f8f9fa;
   border-radius: 10px;
   border-left: 4px solid #667eea;
@@ -41,8 +24,8 @@ toc: false
   margin-bottom: 12px;
 }
 .company-logo {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
   background: #fff;
   border-radius: 8px;
@@ -55,7 +38,7 @@ toc: false
 }
 .company-name {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.15em;
   color: #333;
   margin-bottom: 4px;
 }
@@ -69,26 +52,27 @@ toc: false
 }
 .company-background {
   color: #666;
-  font-size: 0.92em;
-  margin-bottom: 12px;
-  padding-left: 15px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  padding-left: 12px;
   border-left: 2px solid #ddd;
 }
 .job-position {
   font-weight: 600;
   color: #667eea;
-  font-size: 1.05em;
-  margin-bottom: 12px;
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 .responsibilities {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 .responsibilities li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  margin-bottom: 6px;
+  line-height: 1.55;
   color: #444;
   text-align: left;
+  font-size: 0.92em;
 }
 .responsibilities li strong {
   color: #333;
@@ -99,23 +83,23 @@ toc: false
   color: #fff;
   padding: 2px 8px;
   border-radius: 10px;
-  font-size: 0.75em;
+  font-size: 0.72em;
   margin-left: 8px;
   font-weight: 500;
   vertical-align: middle;
 }
 .tech-tags {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 .tech-tag {
   background: #e9ecef;
   color: #495057;
-  padding: 3px 8px;
+  padding: 2px 7px;
   border-radius: 4px;
-  font-size: 0.8em;
+  font-size: 0.78em;
 }
 @media (max-width: 768px) {
   .company-header {
@@ -124,21 +108,18 @@ toc: false
     gap: 10px;
   }
   .company-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   .internship-item {
-    padding: 18px;
+    padding: 16px;
+    margin-bottom: 18px;
   }
   .responsibilities li {
-    font-size: 0.9em;
+    font-size: 0.88em;
   }
 }
 </style>
-
-<div class="internship-header">
-  <p>My journey in data science, AI development, and technology consulting across leading organizations.</p>
-</div>
 
 <div class="internship-item">
   <div class="company-header">

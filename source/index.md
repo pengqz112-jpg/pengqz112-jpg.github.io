@@ -195,7 +195,7 @@ toc: false
 
   <div class="home-links">
     <a href="/about/">About</a>
-    <a href="/internship/">Experience</a>
+    <a href="/internship/">Internship</a>
     <a href="/blog/">Blog</a>
     <a href="/categories/">Categories</a>
   </div>

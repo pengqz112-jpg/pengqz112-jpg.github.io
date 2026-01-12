@@ -105,6 +105,17 @@ header.header,
   padding-left: 0 !important;
 }
 
+/* Override sidebar-active padding on large screens */
+.sidebar-active {
+  padding-left: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  .sidebar-active {
+    padding-left: 0 !important;
+  }
+}
+
 .main-inner {
   max-width: 900px !important;
   margin: 0 auto !important;
@@ -161,34 +172,33 @@ body.sidebar-open .sidebar-overlay {
   display: none !important;
 }
 
-/* Custom toggle button - menu icon */
+/* Custom toggle button - same style as back-to-top */
 #profile-btn {
   position: fixed;
-  left: 15px;
-  bottom: 70px;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-  border-radius: 8px;
+  left: 30px;
+  bottom: 45px;
+  width: 26px;
+  height: 26px;
+  background: var(--primary-color);
   cursor: pointer;
   z-index: 9998;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 #profile-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+  opacity: 1;
+  color: #87daff;
 }
 
-/* Menu icon (3 lines) */
+/* Menu icon (3 lines) - same size as back-to-top icon */
 #profile-btn .menu-icon {
-  width: 18px;
-  height: 14px;
+  width: 14px;
+  height: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,6 +210,13 @@ body.sidebar-open .sidebar-overlay {
   width: 100%;
   background: #fff;
   border-radius: 1px;
+}
+
+@media (max-width: 991px) {
+  #profile-btn {
+    left: 20px;
+    opacity: 1;
+  }
 }
 
 /* Close button inside sidebar */
@@ -483,13 +500,27 @@ body {
   display: none !important;
 }
 
+/* Back to top button - unified style */
 .back-to-top {
   background: var(--primary-color) !important;
   color: #fff !important;
+  bottom: 80px !important;
+  left: 30px !important;
+  width: 26px !important;
+  height: 26px !important;
+  opacity: 0.8 !important;
 }
 
 .back-to-top:hover {
-  background: var(--accent-color) !important;
+  background: var(--primary-color) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 991px) {
+  .back-to-top {
+    left: 20px !important;
+    opacity: 1 !important;
+  }
 }
 
 ::selection {

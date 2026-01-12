@@ -5,6 +5,9 @@
     var sidebar = document.querySelector('.sidebar');
     var sidebarInner = document.querySelector('.sidebar-inner');
     
+    // Remove sidebar-active class to prevent left padding
+    body.classList.remove('sidebar-active');
+    
     if (!sidebar) return;
     
     // Create overlay

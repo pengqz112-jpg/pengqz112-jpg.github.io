@@ -34,24 +34,42 @@ toc: false
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transform: translateY(-2px);
 }
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+.company-info {
+  flex: 1;
+}
 .company-name {
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 1.2em;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .company-period {
   display: inline-block;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
-  padding: 4px 12px;
-  border-radius: 15px;
-  font-size: 0.85em;
-  margin-bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
 }
 .company-background {
   color: #666;
-  font-size: 0.95em;
+  font-size: 0.92em;
   margin-bottom: 12px;
   padding-left: 15px;
   border-left: 2px solid #ddd;
@@ -59,17 +77,18 @@ toc: false
 .job-position {
   font-weight: 600;
   color: #667eea;
-  font-size: 1.1em;
-  margin-bottom: 15px;
+  font-size: 1.05em;
+  margin-bottom: 12px;
 }
 .responsibilities {
   margin: 0;
   padding-left: 20px;
 }
 .responsibilities li {
-  margin-bottom: 10px;
-  line-height: 1.7;
+  margin-bottom: 8px;
+  line-height: 1.6;
   color: #444;
+  text-align: left;
 }
 .responsibilities li strong {
   color: #333;
@@ -78,24 +97,42 @@ toc: false
   display: inline-block;
   background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
   color: #fff;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.8em;
-  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  margin-left: 8px;
   font-weight: 500;
+  vertical-align: middle;
 }
 .tech-tags {
-  margin-top: 15px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 .tech-tag {
   background: #e9ecef;
   color: #495057;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 4px;
-  font-size: 0.85em;
+  font-size: 0.8em;
+}
+@media (max-width: 768px) {
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .internship-item {
+    padding: 18px;
+  }
+  .responsibilities li {
+    font-size: 0.9em;
+  }
 }
 </style>
 
@@ -104,8 +141,13 @@ toc: false
 </div>
 
 <div class="internship-item">
-  <div class="company-name">FWD Group <span class="current-badge">Current</span></div>
-  <div class="company-period">2024 - Present</div>
+  <div class="company-header">
+    <img src="/images/fwd-logo.png" alt="FWD Group" class="company-logo">
+    <div class="company-info">
+      <div class="company-name">FWD Group <span class="current-badge">Current</span></div>
+      <div class="company-period">2024 - Present</div>
+    </div>
+  </div>
   <div class="company-background">A pan-Asian life insurance company committed to changing the way people feel about insurance.</div>
   <div class="job-position">Data Scientist Intern</div>
   <ul class="responsibilities">
@@ -123,8 +165,13 @@ toc: false
 </div>
 
 <div class="internship-item">
-  <div class="company-name">Guangdong Zhongshi Information Technology Co., Ltd.</div>
-  <div class="company-period">04/2024 - 08/2024</div>
+  <div class="company-header">
+    <img src="/images/zhongshi-logo.png" alt="Zhongshi Technology" class="company-logo">
+    <div class="company-info">
+      <div class="company-name">Guangdong Zhongshi Information Technology Co., Ltd.</div>
+      <div class="company-period">04/2024 - 08/2024</div>
+    </div>
+  </div>
   <div class="company-background">A leading ETC equipment and intelligent transportation technology provider in China.</div>
   <div class="job-position">AI Product Manager Intern</div>
   <ul class="responsibilities">
@@ -143,8 +190,13 @@ toc: false
 </div>
 
 <div class="internship-item">
-  <div class="company-name">Guangzhou Jiadu Zhitong Technology Co., Ltd.</div>
-  <div class="company-period">02/2024 - 03/2024</div>
+  <div class="company-header">
+    <img src="/images/jiadu-logo.png" alt="Jiadu Technology" class="company-logo">
+    <div class="company-info">
+      <div class="company-name">Guangzhou Jiadu Zhitong Technology Co., Ltd.</div>
+      <div class="company-period">02/2024 - 03/2024</div>
+    </div>
+  </div>
   <div class="company-background">A publicly listed company specializing in smart city solutions and intelligent transportation systems.</div>
   <div class="job-position">Data Analytics Intern</div>
   <ul class="responsibilities">

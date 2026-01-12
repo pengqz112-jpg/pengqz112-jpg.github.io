@@ -13,6 +13,24 @@
 }
 
 /* ============================================
+   GLOBAL TEXT - Better Word Breaking
+   ============================================ */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Disable justify alignment globally - causes ugly spacing */
+.post-body,
+.post-body p,
+.content,
+p {
+  text-align: left !important;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* ============================================
    FIX TOP BLACK BAR - Remove all dark headers
    ============================================ */
 .headband {
@@ -131,24 +149,22 @@ header.header {
   padding: 15px !important;
 }
 
-/* Author Section */
+/* Author Section - Simplified */
 .site-author-image {
-  width: 80px !important;
-  height: 80px !important;
+  width: 70px !important;
+  height: 70px !important;
   border: 2px solid var(--primary-color) !important;
   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2) !important;
 }
 
+/* Hide author name in sidebar - cleaner look */
 .site-author-name {
-  color: var(--text-primary) !important;
-  font-weight: 600 !important;
-  font-size: 1.1em !important;
-  margin-top: 10px !important;
+  display: none !important;
 }
 
+/* Hide site description in sidebar */
 .site-description {
-  color: var(--text-secondary) !important;
-  font-size: 0.85em !important;
+  display: none !important;
 }
 
 /* Site State */
@@ -157,13 +173,18 @@ header.header {
   font-weight: 600 !important;
 }
 
-/* Social Links - Simple inline style */
+/* Social Links - Compact style */
+.links-of-author {
+  margin-top: 10px !important;
+}
+
 .links-of-author a {
   color: var(--primary-color) !important;
   margin: 0 8px !important;
   transition: color 0.3s ease !important;
   text-decoration: none !important;
   border: none !important;
+  font-size: 1.1em !important;
 }
 
 .links-of-author a:hover {
@@ -171,7 +192,7 @@ header.header {
 }
 
 /* ============================================
-   TABLE OF CONTENTS - Clear Hierarchy
+   TABLE OF CONTENTS - Clean Hierarchy (No Numbers)
    ============================================ */
 .post-toc {
   font-size: 0.88em !important;
@@ -181,31 +202,57 @@ header.header {
   padding-left: 0 !important;
   list-style: none !important;
   margin: 0 !important;
+  counter-reset: none !important;
+}
+
+/* Hide ALL TOC numbers - clean display */
+.post-toc .nav-number {
+  display: none !important;
 }
 
 /* Level 1 items (h2) */
 .post-toc .nav-item {
-  line-height: 1.7 !important;
-  margin-bottom: 6px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 4px !important;
 }
 
-/* Level 2 items (h3) - nested */
+/* Level 2 items (h3) - nested with visual indicator */
 .post-toc .nav-item .nav-item {
-  padding-left: 20px !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-  font-size: 0.95em !important;
+  padding-left: 16px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  font-size: 0.92em !important;
+  position: relative;
+}
+
+/* Visual hierarchy indicator for nested items */
+.post-toc .nav-item .nav-item::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--border-light);
+  border-radius: 50%;
 }
 
 /* Level 3 items (h4) - further nested */
 .post-toc .nav-item .nav-item .nav-item {
-  padding-left: 35px !important;
-  font-size: 0.9em !important;
+  padding-left: 28px !important;
+  font-size: 0.88em !important;
+}
+
+.post-toc .nav-item .nav-item .nav-item::before {
+  left: 16px;
+  width: 3px;
+  height: 3px;
 }
 
 .post-toc .nav-link {
   color: var(--text-secondary) !important;
-  padding: 5px 10px 5px 8px !important;
+  padding: 6px 10px 6px 8px !important;
   display: block !important;
   transition: all 0.2s ease !important;
   text-decoration: none !important;
@@ -226,20 +273,6 @@ header.header {
   border-left-color: var(--accent-color) !important;
   background: rgba(102, 126, 234, 0.1) !important;
   font-weight: 500 !important;
-}
-
-/* TOC Number - Only show for level 1 (h2) */
-.post-toc-content .nav-number {
-  color: var(--primary-color) !important;
-  font-weight: 600 !important;
-  margin-right: 6px !important;
-  font-size: 0.9em !important;
-}
-
-/* Hide numbers for nested items (h3, h4) */
-.post-toc .nav-item .nav-item .nav-number,
-.post-toc .nav-item .nav-item .nav-item .nav-number {
-  display: none !important;
 }
 
 /* TOC Title */
@@ -371,6 +404,54 @@ header.header {
     height: 120px;
     margin: 0 auto 15px;
     display: block;
+  }
+}
+
+/* ============================================
+   MOBILE OPTIMIZATION - Text & Layout
+   ============================================ */
+/* Allow word breaking for long words */
+body {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+}
+
+/* Fix text alignment on mobile - left align instead of justify */
+@media (max-width: 768px) {
+  .post-body,
+  .post-body p,
+  .post-body li,
+  .home-section,
+  .home-section p,
+  .home-section li,
+  .home-banner p {
+    text-align: left !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+  
+  /* Reduce padding on mobile */
+  .home-section {
+    padding: 15px 18px !important;
+  }
+  
+  .home-banner {
+    padding: 20px !important;
+  }
+  
+  /* Smaller font on mobile for better fit */
+  .home-section li {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Fix strong text not breaking weirdly */
+  .home-section li strong {
+    display: inline !important;
+    white-space: normal !important;
   }
 }
 
